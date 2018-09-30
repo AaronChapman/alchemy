@@ -1,15 +1,34 @@
-.available-ingredients {
+body {
 	display: inline-flex;
+	width: 100%;
+}
+
+.available-ingredients {
+	min-width: 10%;
+	overflow: scroll;
+}
+
+.active-ingredients {
+	border: 0.5px solid #9999;
+	border-radius: 2.5px;
+	margin: 25px 0 0 50px;
 }
 
 .ingredient {
 	display: grid;
 	padding: 25px;
-	margin: 25px 12.5px;
-	border: 0.5px solid #999999;
+	margin: 25px 25px 0 25px;
+	border: 0.5px dashed #999999;
 	border-radius: 2.5px;
+	width: 100px;
+	text-align: center;
+	justify-content: center;
 }
 
 .ingredient_label {
 	padding-top: 25px;
+}
+
+.produced-ingredients {
+	
 }
