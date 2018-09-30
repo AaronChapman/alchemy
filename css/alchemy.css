@@ -1,34 +1,56 @@
 body {
-	display: inline-flex;
-	width: 100%;
+	
+}
+
+h1 {
+	margin: 0 0 0 10%;
 }
 
 .available-ingredients {
-	min-width: 10%;
+	border: 0.5px solid #9999;
+	border-radius: 2.5px;
+	margin: 25px 0 0 100px;
+	padding: 25px;
+	width: 200px;
 	overflow: scroll;
 }
 
 .active-ingredients {
 	border: 0.5px solid #9999;
 	border-radius: 2.5px;
-	margin: 25px 0 0 50px;
+	margin: 25px 0 0 100px;
+	padding: 25px;
+	width: 200px;
+}
+
+.alchemy_area {
+	display: inline-flex;
+	width: 100%;
 }
 
 .ingredient {
+	transition: all 1.5s ease-in-out !important;
 	display: grid;
-    padding: 5px;
-    margin: 10px 25px 0 50px;
-    border: 0.5px dashed #999999;
-    border-radius: 2.5px;
-    width: 100px;
-    text-align: center;
-    justify-content: center;
+	padding: 5px;
+	margin: 0 0 10px 0;
+	border: 0.5px dashed #999999;
+	border-radius: 2.5px;
+	text-align: center;
+	justify-content: center;
 }
 
 .ingredient_label {
 	padding-top: 25px;
 }
 
+.ingredient-container-label {
+	text-align: center;
+}
+
 .produced-ingredients {
-	
+	border: 0.5px solid #9999;
+	border-radius: 2.5px;
+	margin: 25px 0 0 100px;
+	padding: 25px;
+	width: 200px;
 }

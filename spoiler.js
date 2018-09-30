@@ -60,7 +60,8 @@ var ingredient_list = `
 ! [ingredient]: earth
 ~ earth + air = dust
 ~ earth + bacteria = mite
-~ earth + earth = mound, pressure
+~ earth + earth = mound
+~ earth + earth = pressure
 ~ earth + fire = ash
 ~ earth + insect = beetle
 ~ earth + lake = clay
@@ -81,7 +82,8 @@ var ingredient_list = `
 ~ fire + brook = steam
 ~ fire + earth = ash
 ~ fire + energy = heat
-~ fire + fire = plasma, energy
+~ fire + fire = plasma
+~ fire + fire = energy
 ~ fire + mud = mud brick
 ~ fire + puddle = steam
 ~ fire + water = steam
@@ -112,7 +114,8 @@ var ingredient_list = `
 ~
 
 ! [ingredient]: hill
-~ hill + hill = mountain, pressure
+~ hill + hill = mountain
+~ hill + hill = pressure
 ~ hill + time = mound
 ~
 
@@ -123,7 +126,8 @@ var ingredient_list = `
 ~
 
 ! [ingredient]: lake
-~ lake + light = algae, bacteria
+~ lake + light = algae
+~ lake + light = bacteria
 ~
 
 ! [ingredient]: light
@@ -148,11 +152,13 @@ var ingredient_list = `
 ~
 
 ! [ingredient]: mound
-~ mound + mound = hill, pressure
+~ mound + mound = hill
+~ mound + mound = pressure
 ~
 
 ! [ingredient]: mountain 
-~ mountain + mountain = mountain range, pressure
+~ mountain + mountain = mountain range
+~ mountain + mountain = pressure
 ~ mountain + time = hill
 ~
 
@@ -181,7 +187,8 @@ var ingredient_list = `
 ~
 
 ! [ingredient]: pond
-~ pond + light = algae, bacteria
+~ pond + light = algae
+~ pond + light = bacteria
 ~
 
 ! [ingredient]: plankton
@@ -279,7 +286,8 @@ var ingredient_list = `
 
 ! [ingredient]: tree
 ~ tree + bush = vine
-~ tree + lightning = fire, charcoal
+~ tree + lightning = fire
+~ tree + lightning = charcoal
 ~ tree + time = log
 ~ tree + tree = forest
 ~ tree + vine = log

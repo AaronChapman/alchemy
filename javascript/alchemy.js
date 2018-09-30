@@ -10,8 +10,20 @@ function check_active_ingredients_for_matches(first_ingredient, second_ingredien
 
 					available_ingredients.push(ingredient_produced);
 
-					$('.produced-ingredients').append('<div class="ingredient" data-ingredient="' + ingredient_produced + '"><img src="images/' + ingredient_produced + '.png"><label class="ingredient-label">' + ingredient_produced + '</label></div>');
-
+					$('.produced-ingredients').append('<div class="ingredient" data-ingredient="' + ingredient_produced + '" style="opacity: 1;"><img src="images/' + ingredient_produced + '.png"><label class="ingredient-label">' + ingredient_produced + '</label></div>');
+					
+					$('.active-ingredients').find('.ingredient[data-ingredient="' + first_ingredient + '"]:first').css('opacity', '0');
+					
+					if (first_ingredient === second_ingredient) {
+						$('.active-ingredients').find('.ingredient[data-ingredient="' + second_ingredient + '"]:eq(1)').css('opacity', '0');
+					} else {
+						$('.active-ingredients').find('.ingredient[data-ingredient="' + second_ingredient + '"]:first').css('opacity', '0');
+					}
+					
+					setTimeout(function() {
+						$('.active-ingredients').find('.ingredient[data-ingredient="' + first_ingredient + '"], .ingredient[data-ingredient="' + second_ingredient + '"]').remove();
+					}, 2000);
+					
 					if ($('.available-ingredients').find('.ingredient[data-ingredient="' + ingredient_produced + '"]').length === 0) {
 						$('.available-ingredients').append('<div class="ingredient" data-ingredient="' + ingredient_produced + '" onclick="ingredient_clicked($(this));"><img src="images/' + ingredient_produced + '.png"><label class="ingredient-label">' + ingredient_produced + '</label></div>');
 					}
@@ -41,8 +53,6 @@ function fill_ingredient_matches_array() {
 		for (var j = 0; j < match_ingredients.length; j++) {
 			var match = match_ingredients[j].substring(4 + ingredient.length, match_ingredients[j].indexOf('=')).trim();
 			var product = match_ingredients[j].substring(match_ingredients[j].indexOf('=') + 2, match_ingredients[j].length).trim();
-
-			console.log(match, product);
 
 			matches.push({
 				'ingredient': match,
