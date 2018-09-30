@@ -1,0 +1,15 @@
+.available-ingredients {
+	display: inline-flex;
+}
+
+.ingredient {
+	display: grid;
+	padding: 25px;
+	margin: 25px 12.5px;
+	border: 0.5px solid #999999;
+	border-radius: 2.5px;
+}
+
+.ingredient_label {
+	padding-top: 25px;
+}
