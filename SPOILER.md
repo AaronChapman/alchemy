@@ -1,8 +1,6 @@
-IF YOU WANT TO PLAY THIS FOR FUN, READ NO FURTHER
+READ NO FURTHER - SPOILERS BELOW
 
 ------------------------------------------------------
-
-this is about to be a testament to my planning skills... holy shit
 
 + solid box shadow coloring according to complexity level
 + clean element containers with wider pixel art pieces above the name
@@ -11,173 +9,235 @@ this is about to be a testament to my planning skills... holy shit
 	+ click elements inside alching area to remove
 	+ button below area to create/mix/concoct/etc
 		+ randomized message for successful/unsusccessful alchemization
++ array of available ingredients should have a two-state sort toggle
+	+ order acquired
+	+ alphabetically
 
-- air
-- - - air + air = wind
-- - - air + earth = dust
-- - - air + fire = smoke
-- - - air + water = rain
+------------------------------------------------------
+
+! [ingredient]: air
+- air + air = wind
+- air + earth = dust
+- air + fire = smoke
+- air + insect = fly
 - air + mud = earth
+- air + water = rain
 
-- algae
+! [ingredient]: algae
 
-- ash
+! [ingredient]: ash
 
-- bacteria
+! [ingredient]: bacteria
+- bacteria + energy = mite
 
-- boulder
+! [ingredient]: beetle
 
-- brook
+! [ingredient]: boulder
+- boulder + time = rock
 
-- clay
+! [ingredient]: brook
 
-- earth
-- - - earth + air = dust
-- - - earth + earth = mound, pressure
-- - - earth + fire = ash
-- - - earth + water = mud
+! [ingredient]: bush
+
+! [ingredient]: charcoal
+
+! [ingredient]: clay
+
+! [ingredient]: earth
+- earth + air = dust
 - earth + bacteria = mite
+- earth + earth = mound, pressure
+- earth + fire = ash
+- earth + insect = beetle
 - earth + lake = clay
 - earth + moss = soil
 - earth + pressure = rock
 - earth + time = rock
+- earth + water = mud
 
-- energy
+! [ingredient]: energy
 
-- dust
+! [ingredient]: dust
 
-- fire
-- - - fire + air = smoke
-- - - fire + earth = ash
-- - - fire + fire = plasma, energy
-- - - fire + water = steam
+! [ingredient]: fire
+- fire + air = smoke
+- fire + brook = steam
+- fire + earth = ash
 - fire + energy = heat
+- fire + fire = plasma, energy
 - fire + mud = mud brick
+- fire + puddle = steam
+- fire + water = steam
 
-- flood
+! [ingredient]: fish
 
-- fungus
+! [ingredient]: flood
+
+! [ingredient]: fly
+
+! [ingredient]: forest
+- forest + rain = rainforest
+
+! [ingredient]: frog
+- frog + energy = salamander
+
+! [ingredient]: fungus
 - fungus + heat = spore
 
-- heat
+! [ingredient]: heat
 
-- hill
+! [ingredient]: hill
 - hill + hill = mountain, pressure
 - hill + time = mound
 
-- hurricane
+! [ingredient]: hurricane
 
-- insect
+! [ingredient]: insect
 
-- lake
+! [ingredient]: lake
 - lake + light = algae, bacteria
 
-- light
+! [ingredient]: light
 
-- lightning
+! [ingredient]: lightning
 
-- mite
+! [ingredient]: log
+- log + time = soil
+
+! [ingredient]: mite
 - mite + energy = insect
 
-- moss
+! [ingredient]: moss
 - moss + bacteria = fungus
 
-- mound
+! [ingredient]: mosquito
+
+! [ingredient]: mound
 - mound + mound = hill, pressure
 
-- mountain 
+! [ingredient]: mountain 
 - mountain + mountain = mountain range, pressure
 - mountain + time = hill
 
-- mountain range
+! [ingredient]: mountain range
 - mountain range + time = mountain
 
-- mud
+! [ingredient]: mud
 
-- mud brick
+! [ingredient]: mud brick
 - mud brick + mud brick = mud hut
 
-- mud hut
+! [ingredient]: mud hut
 - mud hut + mud hut = tribe
 
-- ocean
+! [ingredient]: ocean
 - ocean + algae = seaweed
 - ocean + bacteria = plankton
+- ocean + boulder = sand
 - ocean + hurricane = tsunami
 - ocean + light = seaweed
+- ocean + rock = sand
 
-- pond
+! [ingredient]: pond
 - pond + light = algae, bacteria
 
-- plankton
+! [ingredient]: plankton
 - plankton + energy = tadpole
 
-- plant
+! [ingredient]: plant
+- plant + water = bush
+- plant + rain = tree
 
-- plasma
+! [ingredient]: plasma
 - plasma + plasma = light
 
-- puddle
+! [ingredient]: puddle
 - puddle + ENERGY = brook
 
-- rain
+! [ingredient]: rain
 - rain + wind = storm
 
-- river
+! [ingredient]: rainforest
+
+! [ingredient]: river
 - river + energy = rapids
 - river + rain = flood
 
-- rock
+! [ingredient]: rock
 - rock + algae = moss
 - rock + rock = boulder
 
-- sea
+! [ingredient]: salamander
+
+! [ingredient]: sand
+
+! [ingredient]: sapling
+- sapling + water = plant
+- sapling + rain = plant
+
+! [ingredient]: sea
 - sea + algae = seaweed
 - sea + light = seaweed
 
-- seaweed
+! [ingredient]: seaweed
 
-- seed
-- seed + soil = plant
+! [ingredient]: seed
+- seed + soil = sapling
 
-- smoke
+! [ingredient]: smoke
+- smoke + time = air
 
-- silt
+! [ingredient]: silt
 - silt + heat = dust
 
-- soil
+! [ingredient]: soil
+- soil + time = earth
 
-- spore
+! [ingredient]: spore
 - spore + time = seed
 
-- steam
+! [ingredient]: steam
+- steam + time = air
 
-- storm
+! [ingredient]: storm
 - storm + energy = lightning
 - storm + wind = hurricane
 
-- stream 
+! [ingredient]: stream 
 
-- tadpole
+! [ingredient]: tadpole
+- tadpole + time = frog
+- tadpole + energy = fish
 
-- time
+! [ingredient]: time
 
-- tribe
+! [ingredient]: tree
+- tree + bush = vine
+- tree + lightning = fire, charcoal
+- tree + time = log
+- tree + tree = forest
+- tree + vine = log
 
-- tornado
+! [ingredient]: tribe
 
-- water
-- - - water + air = rain
-- - - water + earth = mud
-- - - water + fire = steam
-- - - water + water = puddle
+! [ingredient]: tornado
+
+! [ingredient]: vine
+
+! [ingredient]: water
+- water + air = rain
 - water + brook = stream
+- water + earth = mud
+- water + fire = steam
+- water + heat = boiling water
+- water + insect = mosquito
 - water + lake = sea
 - water + mud = silt
 - water + pond = lake
 - water + puddle = pond
 - water + sea = ocean
 - water + stream = river
+- water + water = puddle
 
-- wind
+! [ingredient]: wind
 - wind + energy = tornado
