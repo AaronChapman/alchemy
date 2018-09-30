@@ -5,10 +5,12 @@ IF YOU WANT TO PLAY THIS FOR FUN, READ NO FURTHER
 this is about to be a testament to my planning skills... holy shit
 
 + solid box shadow coloring according to complexity level
-+ physics transformations in a separate toggle area
-	+ PRESSURE
-	+ ENERGY
 + clean element containers with wider pixel art pieces above the name
++ area for alching
+	+ elements clicked in the alphabetic browser
+	+ click elements inside alching area to remove
+	+ button below area to create/mix/concoct/etc
+		+ randomized message for successful/unsusccessful alchemization
 
 - air
 - - - air + air = wind
@@ -17,7 +19,13 @@ this is about to be a testament to my planning skills... holy shit
 - - - air + water = rain
 - air + mud = earth
 
+- algae
+
 - ash
+
+- bacteria
+
+- boulder
 
 - brook
 
@@ -25,43 +33,86 @@ this is about to be a testament to my planning skills... holy shit
 
 - earth
 - - - earth + air = dust
-- - - earth + earth = mound (UNLOCKS PRESSURE)
+- - - earth + earth = mound, pressure
 - - - earth + fire = ash
 - - - earth + water = mud
+- earth + bacteria = mite
 - earth + lake = clay
+- earth + moss = soil
+- earth + pressure = rock
+- earth + time = rock
+
+- energy
 
 - dust
 
 - fire
 - - - fire + air = smoke
 - - - fire + earth = ash
-- - - fire + fire = plasma (UNLOCKS ENERGY)
+- - - fire + fire = plasma, energy
 - - - fire + water = steam
+- fire + energy = heat
 - fire + mud = mud brick
 
 - flood
 
+- fungus
+- fungus + heat = spore
+
+- heat
+
 - hill
-- hill + hill = mountain
+- hill + hill = mountain, pressure
+- hill + time = mound
+
+- hurricane
+
+- insect
 
 - lake
+- lake + light = algae, bacteria
 
 - light
 
+- lightning
+
+- mite
+- mite + energy = insect
+
+- moss
+- moss + bacteria = fungus
+
 - mound
-- mound + mound = hill
+- mound + mound = hill, pressure
 
 - mountain 
-- mountain + mountain = mountain range
+- mountain + mountain = mountain range, pressure
+- mountain + time = hill
 
 - mountain range
+- mountain range + time = mountain
 
 - mud
 
+- mud brick
+- mud brick + mud brick = mud hut
+
+- mud hut
+- mud hut + mud hut = tribe
+
 - ocean
+- ocean + algae = seaweed
+- ocean + bacteria = plankton
+- ocean + hurricane = tsunami
+- ocean + light = seaweed
 
 - pond
-- pond + light = algae
+- pond + light = algae, bacteria
+
+- plankton
+- plankton + energy = tadpole
+
+- plant
 
 - plasma
 - plasma + plasma = light
@@ -70,17 +121,50 @@ this is about to be a testament to my planning skills... holy shit
 - puddle + ENERGY = brook
 
 - rain
+- rain + wind = storm
 
 - river
+- river + energy = rapids
 - river + rain = flood
 
+- rock
+- rock + algae = moss
+- rock + rock = boulder
+
 - sea
+- sea + algae = seaweed
+- sea + light = seaweed
+
+- seaweed
+
+- seed
+- seed + soil = plant
 
 - smoke
 
+- silt
+- silt + heat = dust
+
+- soil
+
+- spore
+- spore + time = seed
+
 - steam
 
+- storm
+- storm + energy = lightning
+- storm + wind = hurricane
+
 - stream 
+
+- tadpole
+
+- time
+
+- tribe
+
+- tornado
 
 - water
 - - - water + air = rain
@@ -96,3 +180,4 @@ this is about to be a testament to my planning skills... holy shit
 - water + stream = river
 
 - wind
+- wind + energy = tornado
