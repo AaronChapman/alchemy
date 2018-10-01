@@ -205,7 +205,7 @@ var ingredient_list = `
 ~
 
 ! [ingredient]: puddle
-~ puddle + ENERGY = brook
+~ puddle + energy = brook
 ~
 
 ! [ingredient]: rain
