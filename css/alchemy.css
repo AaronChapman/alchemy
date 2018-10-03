@@ -29,7 +29,7 @@ h1 {
 }
 
 .ingredient {
-	transition: all 1.5s ease-in-out !important;
+	transition: opacity 1s ease-in-out !important;
 	display: grid;
 	padding: 5px;
 	margin: 0 0 10px 0;
@@ -37,10 +37,15 @@ h1 {
 	border-radius: 2.5px;
 	text-align: center;
 	justify-content: center;
+	cursor: pointer;
 }
 
 .ingredient_label {
 	padding-top: 25px;
+}
+
+.ingredient img {
+	height: 50px;
 }
 
 .ingredient-container-label {

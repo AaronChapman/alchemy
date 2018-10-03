@@ -4,8 +4,9 @@ READ NO FURTHER ~ SPOILERS BELOW
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
++ figure out what's going wrong with the workspace ingredients visibility
 + solid box shadow coloring according to complexity level
-+ clean element containers with wider pixel art pieces above the name
++ clean ingredient containers with wider pixel art pieces above the name
 + area for alching
 	+ elements clicked in the alphabetic browser
 	+ click elements inside alching area to remove
@@ -14,6 +15,10 @@ READ NO FURTHER ~ SPOILERS BELOW
 + array of available ingredients should have a two-state sort toggle
 	+ order acquired
 	+ alphabetically
++ add 'data-used' attribute to ingredients that are in the process of being removed
+	+ check for this attribute when removing, and when checking for matches (data-used="false")
++ workspace fix
+	+ limit number of ingredients like with produced container & prepend additions
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
