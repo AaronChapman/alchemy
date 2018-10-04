@@ -1,4 +1,4 @@
-var available_ingredients = ['air', 'earth', 'fire', 'time', 'water'];
+var available_ingredients = ['air', 'water', 'earth', 'fire', 'time'];
 var ingredient_matches = [];
 
 function check_active_ingredients_for_matches() {
@@ -30,7 +30,7 @@ function check_active_ingredients_for_matches() {
 
 function fill_available_ingredients_container() {
 	available_ingredients.forEach(function (item) {
-		$('.available-ingredients').append('<div class="ingredient" data-ingredient="' + item + '" onclick="ingredient_clicked($(this));"><img src="ingredients/' + item + '.png"><label class="ingredient-label">' + item + '</label></div>');
+		$('.available-ingredients').append('<div class="ingredient" data-ingredient="' + item + '" onclick="ingredient_clicked($(this));"><ul class="ingredient_button_table"><li><img src="ingredients/' + item + '.png"></li><li><label class="ingredient-label">' + item + '</label></li></ul></div>');
 	});
 }
 
@@ -65,7 +65,7 @@ function fill_ingredient_matches_array() {
 function ingredient_clicked(ingredient_clicked) {
 	var ingredient = ingredient_clicked.attr('data-ingredient');
 
-	$('.active-ingredients').append('<div class="ingredient" data-ingredient="' + ingredient + '" onclick="$(this).remove()" style="opacity: 1"><img src="ingredients/' + ingredient + '.png"><label class="ingredient-label">' + ingredient + '</label></div>');
+	$('.active-ingredients').append('<div class="ingredient" data-ingredient="' + ingredient + '" onclick="$(this).remove()" style="opacity: 1"><ul class="ingredient_button_table"><li><img src="ingredients/' + ingredient + '.png"></li><li><label class="ingredient-label">' + ingredient + '</label></li></ul></div>');
 
 	$('.active-ingredients').each(function () {
 		if ($(this).find('.ingredient').length > 2) {
@@ -94,11 +94,11 @@ function update_ingredient_containers(ingredient_produced) {
 
 
 	if ($('.produced-ingredients').find('.ingredient[data-ingredient="' + ingredient_produced + '"]').length === 0) {
-		$('.produced-ingredients').find('label:first').after('<div class="ingredient" data-ingredient="' + ingredient_produced + '" style="opacity: 1;"><img src="ingredients/' + ingredient_produced + '.png"><label class="ingredient-label">' + ingredient_produced + '</label></div>');
+		$('.produced-ingredients').find('label:first').after('<div class="ingredient" data-ingredient="' + ingredient_produced + '" style="opacity: 1;"><ul class="ingredient_button_table"><li><img src="ingredients/' + ingredient_produced + '.png"></li><li><label class="ingredient-label">' + ingredient_produced + '</label></li></ul></div>');
 	}
 
 	if ($('.available-ingredients').find('.ingredient[data-ingredient="' + ingredient_produced + '"]').length === 0) {
-		$('.available-ingredients').append('<div class="ingredient" data-ingredient="' + ingredient_produced + '" onclick="ingredient_clicked($(this));"><img src="ingredients/' + ingredient_produced + '.png"><label class="ingredient-label">' + ingredient_produced + '</label></div>');
+		$('.available-ingredients').append('<div class="ingredient" data-ingredient="' + ingredient_produced + '" onclick="ingredient_clicked($(this));"><ul class="ingredient_button_table"><li><img src="ingredients/' + ingredient_produced + '.png"></li><li><label class="ingredient-label">' + ingredient_produced + '</label></li></ul></div>');
 	}
 
 	remove_used_ingredients_from_workspace();

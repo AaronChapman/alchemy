@@ -1,47 +1,71 @@
 body {
-	
+	width: 100%;
+	height: 100%;
+	margin: 25px 0;
+	overflow: hidden;
 }
 
 h1 {
 	margin: 0 0 0 10%;
+	font-family: 'Mogra', cursive;
 }
 
 .available-ingredients {
 	border: 0.5px solid #9999;
 	border-radius: 2.5px;
-	margin: 25px 0 0 100px;
 	padding: 25px;
-	width: 200px;
+	position: relative;
+	height: 75%;
 	overflow: scroll;
 }
 
 .active-ingredients {
 	border: 0.5px solid #9999;
 	border-radius: 2.5px;
-	margin: 25px 0 0 100px;
+	margin: 0 0 0 25px;
 	padding: 25px;
-	width: 200px;
+	width: fit-content;
 }
 
 .alchemy_area {
-	display: inline-flex;
 	width: 100%;
+	height: 100%;
+	display: inline-flex;
+	position: absolute;
+	padding: 25px;
+	border-top: 5px solid rgba(00, 00, 00, 0.25);
 }
 
 .ingredient {
 	transition: opacity 1s ease-in-out !important;
-	display: grid;
-	padding: 5px;
-	margin: 0 0 10px 0;
+	margin: 10px 0 0px 0;
 	border: 0.5px dashed #999999;
 	border-radius: 2.5px;
-	text-align: center;
+	background: floralwhite;
 	justify-content: center;
 	cursor: pointer;
+	height: 50px;
+	max-height: 50px;
+	padding: 0 10px 0 10px;
 }
 
-.ingredient_label {
-	padding-top: 25px;
+.ingredient_button_table {
+	list-style-type: none;
+	display: inline-flex;
+	padding: 0;
+	margin: 0;
+}
+
+.ingredient_button_table li {
+	display: flex;
+	align-items: center;
+}
+
+.ingredient-label {
+	padding: 5px 0 0 10px;
+	font-weight: bold;
+	font-size: 1.25em;
+	font-family: 'Amiko', sans-serif;
 }
 
 .ingredient img {
@@ -50,12 +74,24 @@ h1 {
 
 .ingredient-container-label {
 	text-align: center;
+	margin-bottom: 25px;
 }
 
 .produced-ingredients {
 	border: 0.5px solid #9999;
 	border-radius: 2.5px;
-	margin: 25px 0 0 100px;
+	margin: 0 0 0 25px;
 	padding: 25px;
 	width: 200px;
+}
+
+.left_panel {
+	height: 100%;
+	width: 25%;
+}
+
+.right_panel {
+	padding-left: 25px;
+	width: 75%;
+	display: flex;
 }
