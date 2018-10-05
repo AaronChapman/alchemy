@@ -76,6 +76,14 @@ function ingredient_clicked(ingredient_clicked) {
 	check_active_ingredients_for_matches();
 }
 
+function ingredioso() {
+	available_ingredients = [];
+
+	for (var i = 1; i < ingredient_matches.length; i++) {
+		available_ingredients.push(ingredient_matches[i].name);
+	}
+}
+
 function remove_used_ingredients_from_workspace() {
 	setTimeout(function () {
 		$('.active-ingredients .ingredient').css({

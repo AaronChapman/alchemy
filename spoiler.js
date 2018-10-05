@@ -4,21 +4,12 @@ READ NO FURTHER ~ SPOILERS BELOW
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-+ figure out what's going wrong with the workspace ingredients visibility
-+ solid box shadow coloring according to complexity level
-+ clean ingredient containers with wider pixel art pieces above the name
-+ area for alching
-	+ elements clicked in the alphabetic browser
-	+ click elements inside alching area to remove
-	+ button below area to create/mix/concoct/etc
-		+ randomized message for successful/unsusccessful alchemization
++ randomized message for successful/unsusccessful alchemization
 + array of available ingredients should have a two-state sort toggle
 	+ order acquired
 	+ alphabetically
-+ add 'data-used' attribute to ingredients that are in the process of being removed
-	+ check for this attribute when removing, and when checking for matches (data-used="false")
-+ workspace fix
-	+ limit number of ingredients like with produced container & prepend additions
++ add a clear workspace button
++ write a method & toggle for scraping all ingredients
 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -43,11 +34,18 @@ var ingredient_list = `
 ~ bacteria + energy = mite
 ~
 
+! [ingredient]: bee
+~
+
 ! [ingredient]: beetle
 ~
 
 ! [ingredient]: boulder
 ~ boulder + time = rock
+~
+
+! [ingredient]: brick
+~ brick + brick = wall
 ~
 
 ! [ingredient]: brook
@@ -60,6 +58,14 @@ var ingredient_list = `
 ~
 
 ! [ingredient]: clay
+~ clay + fire = brick
+~ clay + pressure = pottery
+~
+
+! [ingredient]: coal
+~ coal + fire = energy
+~ coal + fire = heat
+~ coal + fire = smoke
 ~
 
 ! [ingredient]: earth
@@ -79,13 +85,16 @@ var ingredient_list = `
 ! [ingredient]: energy
 ~
 
+! [ingredient]: era
+~ 
+
 ! [ingredient]: dust
 ~
 
 ! [ingredient]: fire
 ~ fire + air = smoke
 ~ fire + brook = steam
-~ fire + earth = ash
+~ fire + ingredient = ash
 ~ fire + energy = heat
 ~ fire + fire = plasma
 ~ fire + fire = energy
@@ -95,12 +104,14 @@ var ingredient_list = `
 ~
 
 ! [ingredient]: fish
-~
+~ fish + fire = meat
+~ 
 
 ! [ingredient]: flood
 ~
 
 ! [ingredient]: fly
+~ fly + energy = bee
 ~
 
 ! [ingredient]: forest
@@ -124,6 +135,9 @@ var ingredient_list = `
 ~ hill + time = mound
 ~
 
+! [ingredient]: honey
+~
+
 ! [ingredient]: hurricane
 ~
 
@@ -143,6 +157,9 @@ var ingredient_list = `
 
 ! [ingredient]: log
 ~ log + time = soil
+~
+
+! [ingredient]: meat
 ~
 
 ! [ingredient]: mite
@@ -189,11 +206,15 @@ var ingredient_list = `
 ~ ocean + hurricane = tsunami
 ~ ocean + light = seaweed
 ~ ocean + rock = sand
+~ ocean + fish = tuna
 ~
 
 ! [ingredient]: pond
 ~ pond + light = algae
 ~ pond + light = bacteria
+~
+
+~ [ingredient]: pottery
 ~
 
 ! [ingredient]: plankton
@@ -203,10 +224,15 @@ var ingredient_list = `
 ! [ingredient]: plant
 ~ plant + water = bush
 ~ plant + rain = tree
+~ plant + bee = pollen
+~ plant + bee = honey
 ~
 
 ! [ingredient]: plasma
 ~ plasma + plasma = light
+~
+
+! [ingredient]: pollen
 ~
 
 ! [ingredient]: puddle
@@ -218,11 +244,13 @@ var ingredient_list = `
 ~
 
 ! [ingredient]: rainforest
+~ rainforest + era = coal
 ~
 
 ! [ingredient]: river
 ~ river + energy = rapids
 ~ river + rain = flood
+~ river + fish = salmon
 ~
 
 ! [ingredient]: rock
@@ -231,6 +259,9 @@ var ingredient_list = `
 ~
 
 ! [ingredient]: salamander
+~
+
+! [ingredient]: salmon
 ~
 
 ! [ingredient]: sand
@@ -287,6 +318,10 @@ var ingredient_list = `
 ~
 
 ! [ingredient]: time
+~ time + time = era
+~
+
+! [ingredient]: tornado
 ~
 
 ! [ingredient]: tree
@@ -301,10 +336,13 @@ var ingredient_list = `
 ! [ingredient]: tribe
 ~
 
-! [ingredient]: tornado
+! [ingredient]: tuna
 ~
 
 ! [ingredient]: vine
+~
+
+! [ingredient]: wall
 ~
 
 ! [ingredient]: water
@@ -325,5 +363,5 @@ var ingredient_list = `
 
 ! [ingredient]: wind
 ~ wind + energy = tornado
-~
+~ 
 `;
