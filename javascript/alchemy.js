@@ -100,7 +100,6 @@ function remove_used_ingredients_from_workspace() {
 function update_ingredient_containers(ingredient_produced) {
 	available_ingredients.push(ingredient_produced);
 
-
 	if ($('.produced-ingredients').find('.ingredient[data-ingredient="' + ingredient_produced + '"]').length === 0) {
 		$('.produced-ingredients').find('label:first').after('<div class="ingredient" data-ingredient="' + ingredient_produced + '" style="opacity: 1;"><ul class="ingredient_button_table"><li><img src="ingredients/' + ingredient_produced + '.png"></li><li><label class="ingredient-label">' + ingredient_produced + '</label></li></ul></div>');
 	}
@@ -112,7 +111,23 @@ function update_ingredient_containers(ingredient_produced) {
 	remove_used_ingredients_from_workspace();
 }
 
+function warp_ingredient_containers() {
+	var border_radius_values = ['25px', '20px', '15px', '10px', '5px'];
+	
+	$('.ingredient').each(function() {
+		var new_value = 
+				border_radius_values[Math.floor(Math.random() * border_radius_values.length) - 1] + ' ' + border_radius_values[Math.floor(Math.random() * border_radius_values.length) - 1] + ' ' + border_radius_values[Math.floor(Math.random() * border_radius_values.length) - 1] + ' ' + border_radius_values[Math.floor(Math.random() * border_radius_values.length) - 1];
+
+		$(this).css('border-radius', new_value);
+	});
+	
+	setTimeout(function() {
+		warp_ingredient_containers();
+	}, 1500);
+}
+
 $(document).ready(function () {
 	fill_available_ingredients_container();
 	fill_ingredient_matches_array();
+	warp_ingredient_containers();
 });

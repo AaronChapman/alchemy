@@ -34,7 +34,7 @@ var ingredient_list = `
 ~ bacteria + energy = mite
 ~
 
-! [ingredient]: bee
+! [ingredient]: bees
 ~
 
 ! [ingredient]: beetle
@@ -111,7 +111,7 @@ var ingredient_list = `
 ~
 
 ! [ingredient]: fly
-~ fly + energy = bee
+~ fly + energy = bees
 ~
 
 ! [ingredient]: forest
@@ -224,8 +224,8 @@ var ingredient_list = `
 ! [ingredient]: plant
 ~ plant + water = bush
 ~ plant + rain = tree
-~ plant + bee = pollen
-~ plant + bee = honey
+~ plant + bees = pollen
+~ plant + bees = honey
 ~
 
 ! [ingredient]: plasma
