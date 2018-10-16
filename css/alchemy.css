@@ -107,8 +107,14 @@ h1 {
 
 .list-of-ingredients {
 	overflow: scroll;
-	margin-top: 25px;
-	height: 100%;
+	margin-top: 35px;
+	padding: 10px;
+	padding-bottom: 45px;
+	border-top: 2px solid rgba(54, 54, 54, 0.5);
+	border-bottom: 2px solid rgba(54, 54, 54, 0.5);
+	border-left: none;
+	border-right: none;
+	height: 90%;
 }
 
 .left_panel {
