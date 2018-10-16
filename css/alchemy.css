@@ -101,7 +101,7 @@ h1 {
 	width: 100%;
 }
 
-.ingredient-container-label {
+.ingredient-container-label:first {
 	margin-left: -25px;
 }
 
@@ -134,4 +134,5 @@ h1 {
 .right_panel {
 	width: -webkit-fill-available;
 	display: flex;
+	padding: 25px 0 0 0;
 }
