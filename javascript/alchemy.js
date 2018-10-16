@@ -30,7 +30,7 @@ function check_active_ingredients_for_matches() {
 
 function fill_available_ingredients_container() {
 	available_ingredients.forEach(function (item) {
-		$('.available-ingredients').append('<div class="ingredient" data-ingredient="' + item + '" onclick="ingredient_clicked($(this));"><ul class="ingredient_button_table"><li><img src="ingredients/' + item + '.png"></li><li><label class="ingredient-label">' + item + '</label></li></ul></div>');
+		$('.list-of-ingredients').append('<div class="ingredient" data-ingredient="' + item + '" onclick="ingredient_clicked($(this));"><ul class="ingredient_button_table"><li><img src="ingredients/' + item + '.png"></li><li><label class="ingredient-label">' + item + '</label></li></ul></div>');
 	});
 }
 
@@ -104,8 +104,8 @@ function update_ingredient_containers(ingredient_produced) {
 		$('.produced-ingredients').find('label:first').after('<div class="ingredient" data-ingredient="' + ingredient_produced + '" style="opacity: 1;"><ul class="ingredient_button_table"><li><img src="ingredients/' + ingredient_produced + '.png"></li><li><label class="ingredient-label">' + ingredient_produced + '</label></li></ul></div>');
 	}
 
-	if ($('.available-ingredients').find('.ingredient[data-ingredient="' + ingredient_produced + '"]').length === 0) {
-		$('.available-ingredients').append('<div class="ingredient" data-ingredient="' + ingredient_produced + '" onclick="ingredient_clicked($(this));"><ul class="ingredient_button_table"><li><img src="ingredients/' + ingredient_produced + '.png"></li><li><label class="ingredient-label">' + ingredient_produced + '</label></li></ul></div>');
+	if ($('.list-of-ingredients').find('.ingredient[data-ingredient="' + ingredient_produced + '"]').length === 0) {
+		$('.list-of-ingredients').append('<div class="ingredient" data-ingredient="' + ingredient_produced + '" onclick="ingredient_clicked($(this));"><ul class="ingredient_button_table"><li><img src="ingredients/' + ingredient_produced + '.png"></li><li><label class="ingredient-label">' + ingredient_produced + '</label></li></ul></div>');
 	}
 
 	remove_used_ingredients_from_workspace();
