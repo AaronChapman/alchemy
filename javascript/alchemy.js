@@ -1,6 +1,17 @@
 var available_ingredients = ['air', 'water', 'earth', 'fire', 'time'];
 var ingredient_matches = [];
 
+
+// reworking check_active_ingredients_for_matches
+
+function check_active_ingredients_for_matches_clone() {
+	
+}
+
+
+
+
+
 function check_active_ingredients_for_matches() {
 	var first_ingredient = $('.active-ingredients .ingredient').eq(0).attr('data-ingredient');
 	var second_ingredient = $('.active-ingredients .ingredient').eq(1).attr('data-ingredient');
@@ -74,6 +85,7 @@ function ingredient_clicked(ingredient_clicked) {
 	});
 
 	check_active_ingredients_for_matches();
+	check_active_ingredients_for_matches_clone();
 }
 
 function ingredioso() {
