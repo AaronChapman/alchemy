@@ -68,6 +68,9 @@ var ingredient_list = `
 ~ coal + fire = smoke
 ~
 
+! [ingredient]: dust
+~
+
 ! [ingredient]: earth
 ~ earth + air = dust
 ~ earth + bacteria = mite
@@ -86,9 +89,6 @@ var ingredient_list = `
 ~
 
 ! [ingredient]: era
-~ 
-
-! [ingredient]: dust
 ~
 
 ! [ingredient]: fire
@@ -105,7 +105,7 @@ var ingredient_list = `
 
 ! [ingredient]: fish
 ~ fish + fire = meat
-~ 
+~
 
 ! [ingredient]: flood
 ~

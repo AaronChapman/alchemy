@@ -3,12 +3,38 @@ var ingredient_matches = [];
 
 
 // reworking check_active_ingredients_for_matches
+// reference first and compare against all ingredients that follow
+// reference next and repeat
+// and repeat
 
 function check_active_ingredients_for_matches_clone() {
-	
+
+}
+
+function update_ingredex() {
+	var last_letter = "";
+
+	$('.ingredex').empty();
+
+	$('.list-of-ingredients .ingredient').each(function () {
+		var this_letter = $(this).text()[0].toLowerCase();
+		
+		if (this_letter != last_letter) {
+			last_letter = this_letter;
+			
+			$(this).attr('id', this_letter);
+			
+			$('.ingredex').append('<a href="#' + this_letter + '">' + this_letter + '</a><br/>');
+		} else {
+			$(this).removeAttr('id');
+		}
+	});
 }
 
 
+// steps for creating alphabetical ingredient scroll bar
+// programmatically create a series of links (organized vertically via css)
+// hrefs should lead to the first ingredient that starts with the letter clicked
 
 
 
@@ -43,6 +69,8 @@ function fill_available_ingredients_container() {
 	available_ingredients.forEach(function (item) {
 		$('.list-of-ingredients').append('<div class="ingredient" data-ingredient="' + item + '" onclick="ingredient_clicked($(this));"><ul class="ingredient_button_table"><li><img src="ingredients/' + item + '.png"></li><li><label class="ingredient-label">' + item + '</label></li></ul></div>');
 	});
+	
+	update_ingredex();
 }
 
 function fill_ingredient_matches_array() {
@@ -121,19 +149,20 @@ function update_ingredient_containers(ingredient_produced) {
 	}
 
 	remove_used_ingredients_from_workspace();
+	update_ingredex();
 }
 
 function warp_ingredient_containers() {
 	var border_radius_values = ['25px', '20px', '15px', '10px', '5px'];
-	
-	$('.ingredient').each(function() {
-		var new_value = 
-				border_radius_values[Math.floor(Math.random() * border_radius_values.length) - 1] + ' ' + border_radius_values[Math.floor(Math.random() * border_radius_values.length) - 1] + ' ' + border_radius_values[Math.floor(Math.random() * border_radius_values.length) - 1] + ' ' + border_radius_values[Math.floor(Math.random() * border_radius_values.length) - 1];
+
+	$('.ingredient').each(function () {
+		var new_value =
+			border_radius_values[Math.floor(Math.random() * border_radius_values.length) - 1] + ' ' + border_radius_values[Math.floor(Math.random() * border_radius_values.length) - 1] + ' ' + border_radius_values[Math.floor(Math.random() * border_radius_values.length) - 1] + ' ' + border_radius_values[Math.floor(Math.random() * border_radius_values.length) - 1];
 
 		$(this).css('border-radius', new_value);
 	});
-	
-	setTimeout(function() {
+
+	setTimeout(function () {
 		warp_ingredient_containers();
 	}, 1500);
 }
