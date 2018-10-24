@@ -39,8 +39,8 @@ function update_ingredex() {
 
 
 function check_active_ingredients_for_matches() {
-	var first_ingredient = $('.active-ingredients .ingredient').eq(0).attr('data-ingredient');
-	var second_ingredient = $('.active-ingredients .ingredient').eq(1).attr('data-ingredient');
+	var first_ingredient = $('.workspace .ingredient').eq(0).attr('data-ingredient');
+	var second_ingredient = $('.workspace .ingredient').eq(1).attr('data-ingredient');
 
 	for (var i = 0; i < ingredient_matches.length; i++) {
 		if (ingredient_matches[i].name === first_ingredient) {
@@ -104,9 +104,9 @@ function fill_ingredient_matches_array() {
 function ingredient_clicked(ingredient_clicked) {
 	var ingredient = ingredient_clicked.attr('data-ingredient');
 
-	$('.active-ingredients').append('<div class="ingredient" data-ingredient="' + ingredient + '" onclick="$(this).remove()" style="opacity: 1"><ul class="ingredient_button_table"><li><img src="ingredients/' + ingredient + '.png"></li><li><label class="ingredient-label">' + ingredient + '</label></li></ul></div>');
+	$('.workspace').append('<div class="ingredient" data-ingredient="' + ingredient + '" onclick="$(this).remove()" style="opacity: 1"><ul class="ingredient_button_table"><li><img src="ingredients/' + ingredient + '.png"></li><li><label class="ingredient-label">' + ingredient + '</label></li></ul></div>');
 
-	$('.active-ingredients').each(function () {
+	$('.workspace').each(function () {
 		if ($(this).find('.ingredient').length > 2) {
 			$(this).find('.ingredient:last').remove();
 		}
@@ -126,14 +126,14 @@ function ingredioso() {
 
 function remove_used_ingredients_from_workspace() {
 	setTimeout(function () {
-		$('.active-ingredients .ingredient').css({
+		$('.workspace .ingredient').css({
 			'transition': 'all 1s ease-in-out',
 			'opacity': '0'
 		});
 	}, 200);
 
 	setTimeout(function () {
-		$('.active-ingredients .ingredient').remove();
+		$('.workspace .ingredient').remove();
 	}, 1000);
 }
 

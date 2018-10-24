@@ -18,6 +18,19 @@ h1 {
 	font-family: 'Mogra', cursive;
 }
 
+.all {
+	top: 0;
+	right: 0;
+	position: fixed;
+	margin: 25px;
+	width: 50px;
+	height: 25px;
+	background: white;
+	border: 1px solid rgba(54, 54, 54, 0.5);
+	border-radius: 5px;
+	text-align: center;
+}
+
 .available-ingredients {
 	padding: 50px 25px 25px 25px;
 	position: relative;
@@ -28,13 +41,8 @@ h1 {
 
 .active-ingredients {
 	margin: 0 0 0 25px;
-	border-radius: 5px;
-	padding: 50px 25px 25px 25px;
-	width: 20%;
-	height: 145px;
-	background: rgba(100, 40, 60, 0.2);
-	display: grid;
 	position: relative;
+	min-width: 25%;
 }
 
 .alchemy_area {
@@ -135,11 +143,11 @@ h1 {
 	margin-top: 35px;
 	padding: 10px;
 	padding-bottom: 45px;
-	border-top: 2px solid rgba(54, 54, 54, 0.5);
-	border-bottom: 2px solid rgba(54, 54, 54, 0.5);
-	border-left: none;
+	border: 2px solid rgba(54, 54, 54, 0.5);
 	border-right: none;
+	border-radius: 5px 0 0 5px;
 	height: 80%;
+	background: ivory;
 }
 
 .left_panel {
@@ -160,4 +168,14 @@ h1 {
 	width: -webkit-fill-available;
 	display: flex;
 	padding: 25px 0 0 0;
+}
+
+.workspace {
+	border: 2px solid rgba(54, 54, 54, 0.5);
+	border-radius: 5px;
+	padding: 15px 25px 25px 25px;
+	background: rgba(100, 40, 60, 0.2);
+	display: grid;
+	margin: 60px 0 0 0;
+	min-height: 130px;
 }
