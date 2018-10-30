@@ -81,6 +81,7 @@ var ingredient_list = `
 ~ earth + lake = clay
 ~ earth + moss = soil
 ~ earth + pressure = rock
+~ earth + rain = mud
 ~ earth + time = rock
 ~ earth + water = mud
 ~
@@ -142,6 +143,9 @@ var ingredient_list = `
 ~
 
 ! [ingredient]: insect
+~
+
+! [ingredient]: kudzu
 ~
 
 ! [ingredient]: lake
@@ -331,6 +335,7 @@ var ingredient_list = `
 ~ tree + time = log
 ~ tree + tree = forest
 ~ tree + vine = log
+~ tree + vine = kudzu
 ~
 
 ! [ingredient]: tribe
